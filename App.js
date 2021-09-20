@@ -6,10 +6,10 @@ import Routes from './src/Navigation/Routes';
 
 const App = () => {
 
-  useEffect(()=>{
-    requestUserPermission()
-    notificationListener()
-  },[])
+  // useEffect(()=>{
+  //   requestUserPermission()
+  //   notificationListener()
+  // },[])
 
   return (
     <View style={{flex:1}}>
