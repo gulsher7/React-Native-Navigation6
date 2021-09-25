@@ -7,9 +7,7 @@ import ExploreStack from './ExploreStack';
 import HomeStack from './HomeStack';
 import PorfileStack from './ProfileStack';
 
-
 const Tab = createBottomTabNavigator();
-
 
 function TabRoutes() {
 

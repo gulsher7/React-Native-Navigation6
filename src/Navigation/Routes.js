@@ -1,22 +1,23 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import MainStack from './MainStack';
+import navigationStrings from '../constants/navigationStrings';
+import { ProductDetails } from "../Screens";
+import TabRoutes from './TabRoutes';
 
+const Drawer = createDrawerNavigator();
 
-
-const Stack = createNativeStackNavigator();
-const Tab = createBottomTabNavigator();
 
 function Routes() {
     return (
         <NavigationContainer>
-            <Stack.Navigator
-            screenOptions={{headerShown: false}}
+            <Drawer.Navigator
+                screenOptions={{ headerShown: false }}
             >
-                {MainStack(Stack)}
-            </Stack.Navigator>
+                <Drawer.Screen component={TabRoutes} name={navigationStrings.HOME} />
+                <Drawer.Screen component={ProductDetails} name={navigationStrings.PRODUCT_DETAILS} />
+                
+            </Drawer.Navigator>
         </NavigationContainer>
     )
 }
